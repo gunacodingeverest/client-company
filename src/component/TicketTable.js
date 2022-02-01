@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import tickets from "../asset/data/dummy-tickets.json";
-const TicketTable = () => {
+
+const TicketTable = ({ table }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -13,8 +13,8 @@ const TicketTable = () => {
         </tr>
       </thead>
       <tbody>
-        {tickets.length ? (
-          tickets.map((rowss) => (
+        {table.length ? (
+          table.map((rowss) => (
             <tr key={rowss.id}>
               <td>{rowss.id}</td>
               <td>{rowss.subject}</td>
